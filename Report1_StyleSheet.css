@@ -1,0 +1,52 @@
+﻿body {
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 900px;
+    text-align: center;
+}
+
+table, td, th {
+    border: solid 1px #cccccc;
+}
+
+tr {
+    height: 40px;
+}
+
+#table_title {
+    height: 30px;
+    font-size: 40px;
+    font-family:'Global Serif';
+    background-color: #F6F6F6;
+}
+
+#col1{
+    width: 90px;
+}
+
+#col2{
+    width: 70px;
+}
+
+#col3 {
+    width: 90px;
+}
+
+#col4{
+    width: 80px;
+}
+
+#col5, #col6 {
+    width: 80px;
+}
+
+#col8{
+    width: 140px;
+}
+.center {
+    text-align: center;
+}
+

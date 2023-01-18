@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="허혜민_인사관리.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1000px;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style3 {
+            width: 269px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           
+                <table align="center" cellpadding="0" cellspacing="0" class="auto-style1">
+                    <tr>
+                        <td colspan="2">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/img/top.jpg" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style = "vertical-align: top" class="auto-style3">
+                            <asp:Panel ID="Panel1" runat="server">
+                            <asp:TextBox ID="txt_id" runat="server" MaxLength="20"></asp:TextBox>
+                            아이디<br />
+                            <asp:TextBox ID="txt_pw" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
+                            암호<br />
+                            <asp:Button ID="Button_login" runat="server" Text="로그인" OnClick="Button_login_Click" />
+                            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/member/MemberAdd.aspx">회원가입</asp:LinkButton>
+
+                            </asp:Panel>
+                            
+                            <asp:Panel ID="Panel2" runat="server" Height="58px">
+                                아이디:<asp:Label ID="LabelId" runat="server" Text="Label"></asp:Label>
+                                <br />
+                                <asp:Button ID="Button_logout" runat="server" Text="로그아웃" OnClick="Button_logout_Click" />
+
+
+                            </asp:Panel>
+                            
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/w_home.gif" PostBackUrl="~/Default.aspx" />
+                            
+                            <br />
+                            <asp:Panel ID="Panel3" runat="server">
+                            인사관리
+                            <br />
+                            -<asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Insa.aspx">입력</asp:HyperLink>
+                            <br />
+                            -<asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Report.aspx">보고서</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Board/Default.aspx">고객지원</asp:HyperLink>
+                            <br />
+                            </asp:Panel>
+                            
+                            <br />
+                            접속자:<br />
+                            <asp:Label ID="lbCounter" runat="server" Text="0"></asp:Label>
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                        <td style = "width: 800px; vertical-align: top;">
+
+                            <div>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                 
+                                    <p>
+                                        <br />
+                                    </p>
+                                    <h1 class="auto-style2">우리 회사 방문을 환영합니다</h1>
+                                    <p>
+                                    </p>
+                                    <p>
+                                    </p>
+                                 
+                                </asp:ContentPlaceHolder>
+                            </div>
+
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="auto-style2">
+
+                            <hr />
+
+                            <asp:HyperLink ID="HyperLink1" runat="server">회사 소개</asp:HyperLink>
+&nbsp;|&nbsp;
+                            <asp:HyperLink ID="HyperLink2" runat="server">개인정보처리방침</asp:HyperLink>
+&nbsp;|&nbsp;
+                            <asp:HyperLink ID="HyperLink3" runat="server">서비스 이용 약관</asp:HyperLink>
+                            <br />
+                            <br />
+                            허혜민(simhae5159@gmail.com), All rights reserved.)</tr>
+                </table>
+        </div>
+    </form>
+</body>
+</html>
